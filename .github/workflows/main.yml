@@ -20,6 +20,10 @@ jobs:
         with:
           java-version: 17
           maven-version: 3.8.2
+      - name: Heroku Container Registry login
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:login
       - name: Maven deploy
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
