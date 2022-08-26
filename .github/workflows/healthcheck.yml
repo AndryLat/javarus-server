@@ -1,9 +1,8 @@
 name: Healthcheck
 
 on:
-  # Triggers the workflow every 5 minutes
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "* * * * *"
 
 jobs:
   cron:
